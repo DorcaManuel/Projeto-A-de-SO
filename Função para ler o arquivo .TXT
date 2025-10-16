@@ -1,1 +1,28 @@
+ void lerArquivo(char nomearquivo[], Lista *lista)
+    {
 
+        
+        FILE *file;
+        int cont = 0;
+        file = fopen(nomearquivo,"r" );
+        if(file)
+        {
+
+
+            printf("\n\ttexto lido do arquivo\n\n ");
+            while(fscanf(file,"%[^,]%*[,]%[^\n]", t, IO)==2)
+            {
+
+                inserirFim(lista, nomeLista);
+
+                printf("%s,%s\n", t, IO);
+
+            }
+
+            fclose(file);
+
+
+        }
+
+
+    }
